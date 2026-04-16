@@ -2874,6 +2874,49 @@
 +	<span class="btn se_decide b_white small">Receive</span>
  
  </script>
+--- a/magica/template/quest/CharaQuest.html
++++ b/magica/template/quest/CharaQuest.html
+@@ -7,8 +7,8 @@
+ 	<div id="charaList" class="show">
+ 		<div id="toggleQuestType" class="commonFrame2">
+ 			<ul id="toggleBtns" class="scrollInner common_tab t_pink">
+-				<li class="TE btn se_tabs CHARA current" data-type="CHARA"><div class="batch"></div><span>魔法少女</span></li>
+-				<li class="TE btn se_tabs COSTUME" data-type="COSTUME"><div class="batch"></div><span>衣装</span></li>
++				<li class="TE btn se_tabs CHARA current" data-type="CHARA"><div class="batch"></div><span>Magical Girls</span></li>
++				<li class="TE btn se_tabs COSTUME" data-type="COSTUME"><div class="batch"></div><span>Costumes</span></li>
+ 			</ul>
+ 		</div>
+ 		<div id="tabArea">
+@@ -28,7 +28,7 @@
+ 		</div>
+ 
+ 		<div id="charaQuestWrap">
+-			<p id='charaQuestCation' class='none ts_white'>該当する魔法少女が存在しません</p>
++			<p id='charaQuestCation' class='none ts_white'>No Applicable Magical Girls</p>
+ 			<div id="charaQuestInner" class="charaQuestInner all">
+ 			</div>
+ 		</div>
+@@ -143,9 +143,9 @@
+ 	</span>
+ 
+ 	<%="<% if(model.section.genericIndex < 4) { %\>"%>
+-		<span class="sectionNo"><%="<%= model.section.genericIndex %\>"%>話</span>
++		<span class="sectionNo">Ep.<%="<%= model.section.genericIndex %\>"%></span>
+ 	<%="<% } else if(model.section.genericIndex == 4) { %\>"%>
+-		<span class="sectionNo">ドッペル</span>
++		<span class="sectionNo">Doppel</span>
+ 	<%="<% } else if(!model.section.genericIndex) { %\>"%>
+ 
+ 	<%="<% } %\>"%>
+@@ -209,7 +209,7 @@
+ <script type="text/template" id="OpenConditionPopupTemp">
+ 	<div class="popupInner">
+ 		<span class="closeDefault se_cancel popupCloseBtn TE"></span>
+-		<p id="popupInfoDetailTitle" class="popupTitle common_title">ストーリー解放条件</p>
++		<p id="popupInfoDetailTitle" class="popupTitle common_title">Requirements to Unlock</p>
+ 
+ 		<div class="popupTextArea">
+ 			<%="<% _.forEach(model.conditionList,function(txt,index){ %\>"%>
 --- a/magica/template/quest/scene0/BattleSelect.html
 +++ b/magica/template/quest/scene0/BattleSelect.html
 @@ -3,7 +3,7 @@
